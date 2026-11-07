@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Downloaded datasets
+ml/datasets/raw/
+ml/datasets/processed/
+
+# Python environment
+.venv/
+__pycache__/
+*.pyc

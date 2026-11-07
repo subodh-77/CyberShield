@@ -1,0 +1,149 @@
+{
+    "project": "CyberShield",
+    "schema_version": "2.0",
+    "extractor_version": "2.0",
+    "selected_model": "Extra Trees",
+    "selection_metric": "validation_f1",
+    "decision_threshold": 0.5,
+    "feature_count": 33,
+    "feature_order": [
+        "url_length",
+        "hostname_length",
+        "domain_length",
+        "path_length",
+        "num_subdomains",
+        "subdomain_ratio",
+        "max_subdomain_length",
+        "domain_entropy",
+        "domain_digit_count",
+        "domain_hyphen_count",
+        "contains_unicode",
+        "non_ascii_count",
+        "mixed_script",
+        "contains_punycode",
+        "has_https",
+        "has_ip_address",
+        "has_at_symbol_in_authority",
+        "has_double_slash_in_path",
+        "has_encoded_characters",
+        "percent_encoded_count",
+        "has_nonstandard_port",
+        "has_fragment",
+        "query_param_count",
+        "query_length",
+        "path_segment_count",
+        "max_path_segment_length",
+        "suspicious_keyword_subdomain_count",
+        "suspicious_keyword_domain_count",
+        "suspicious_keyword_path_count",
+        "suspicious_keyword_query_count",
+        "tld_length",
+        "has_suspicious_tld",
+        "has_url_shortener"
+    ],
+    "training_records": 52361,
+    "validation_records": 17454,
+    "final_training_records": 69815,
+    "test_records": 17455,
+    "final_training_seconds": 3.074,
+    "test_metrics": {
+        "accuracy": 0.9865368089372673,
+        "precision": 0.9858410609233224,
+        "recall": 0.9906813627254509,
+        "f1_score": 0.9882552851216952,
+        "roc_auc": 0.993145206801563,
+        "specificity": 0.9810033444816053,
+        "false_positive_rate": 0.018996655518394648,
+        "true_negatives": 7333,
+        "false_positives": 142,
+        "false_negatives": 93,
+        "true_positives": 9887,
+        "confusion_matrix": [
+            [
+                7333,
+                142
+            ],
+            [
+                93,
+                9887
+            ]
+        ],
+        "classification_report": {
+            "Benign": {
+                "precision": 0.9874764341502827,
+                "recall": 0.9810033444816053,
+                "f1-score": 0.9842292463593048,
+                "support": 7475.0
+            },
+            "Phishing": {
+                "precision": 0.9858410609233224,
+                "recall": 0.9906813627254509,
+                "f1-score": 0.9882552851216952,
+                "support": 9980.0
+            },
+            "accuracy": 0.9865368089372673,
+            "macro avg": {
+                "precision": 0.9866587475368025,
+                "recall": 0.9858423536035281,
+                "f1-score": 0.9862422657405,
+                "support": 17455.0
+            },
+            "weighted avg": {
+                "precision": 0.9865413997873458,
+                "recall": 0.9865368089372673,
+                "f1-score": 0.9865311579518946,
+                "support": 17455.0
+            }
+        }
+    },
+    "validation_comparison": [
+        {
+            "model": "Extra Trees",
+            "training_seconds": 2.076,
+            "validation_prediction_seconds": 0.334,
+            "accuracy": 0.9875673198120775,
+            "precision": 0.9866400797607179,
+            "recall": 0.9916825333199719,
+            "f1_score": 0.9891548803038632,
+            "roc_auc": 0.9963044399928814,
+            "specificity": 0.9820735785953177,
+            "false_positive_rate": 0.017926421404682275,
+            "true_negatives": 7341,
+            "false_positives": 134,
+            "false_negatives": 83,
+            "true_positives": 9896
+        },
+        {
+            "model": "Gradient Boosting",
+            "training_seconds": 5.749,
+            "validation_prediction_seconds": 0.076,
+            "accuracy": 0.9873954394408159,
+            "precision": 0.9867331670822943,
+            "recall": 0.9912816915522598,
+            "f1_score": 0.989002199560088,
+            "roc_auc": 0.9946584684023739,
+            "specificity": 0.9822073578595317,
+            "false_positive_rate": 0.017792642140468228,
+            "true_negatives": 7342,
+            "false_positives": 133,
+            "false_negatives": 87,
+            "true_positives": 9892
+        },
+        {
+            "model": "Random Forest",
+            "training_seconds": 1.887,
+            "validation_prediction_seconds": 0.225,
+            "accuracy": 0.9868797983270311,
+            "precision": 0.9866240766620084,
+            "recall": 0.9904800080168353,
+            "f1_score": 0.9885482822423364,
+            "roc_auc": 0.9969314020982523,
+            "specificity": 0.9820735785953177,
+            "false_positive_rate": 0.017926421404682275,
+            "true_negatives": 7341,
+            "false_positives": 134,
+            "false_negatives": 95,
+            "true_positives": 9884
+        }
+    ]
+}

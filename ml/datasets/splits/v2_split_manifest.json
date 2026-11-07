@@ -1,0 +1,34 @@
+{
+    "source_dataset": "ml/datasets/processed/final_url_dataset_v2_deduplicated.csv",
+    "split_strategy": "StratifiedGroupKFold",
+    "n_splits": 5,
+    "random_state": 42,
+    "validation_fold": 2,
+    "test_fold": 3,
+    "grouping": "registrable_domain_with_private_suffixes",
+    "splits": {
+        "train": {
+            "records": 52361,
+            "benign": 22425,
+            "phishing": 29936,
+            "unique_domains": 32234
+        },
+        "validation": {
+            "records": 17454,
+            "benign": 7475,
+            "phishing": 9979,
+            "unique_domains": 10747
+        },
+        "test": {
+            "records": 17455,
+            "benign": 7475,
+            "phishing": 9980,
+            "unique_domains": 10746
+        }
+    },
+    "domain_overlap": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+    }
+}
